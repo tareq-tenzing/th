@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Md Tareq Hossain – MSc student at Leuphana University Lüneburg. Research in sustainability, capital markets and audit quality.">
+<title>Md Tareq Hossain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an accountant's ledger turned research CV — a narrow date column ruled off from the entries, green ledger rules, mono figures. */
+:root{
+  --paper:#f1f4ee; --sheet:#ffffff; --ink:#13201b; --muted:#4d5e56;
+  --rule:#c3d4c9; --green:#14614a; --green-soft:#d3e8dc; --red:#b03a26;
+  --band:#0f3b2f; --band-ink:#f1f6f2; --band-muted:#a8c7b8; --band-rule:#2b5c4c;
+  --gold:#e8b14a; --amber:#9a5f0e;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0b1210; --sheet:#121c18; --ink:#e6eee9; --muted:#9fb2a9;
+  --rule:#26392f; --green:#6fd1a6; --green-soft:#173327; --red:#f08d74;
+  --band:#0d2c23; --band-ink:#eef5f0; --band-muted:#9cc0ae; --band-rule:#245343;
+  --gold:#f0bd5c; --amber:#f0bd5c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0b1210; --sheet:#121c18; --ink:#e6eee9; --muted:#9fb2a9;
+  --rule:#26392f; --green:#6fd1a6; --green-soft:#173327; --red:#f08d74;
+  --band:#0d2c23; --band-ink:#eef5f0; --band-muted:#9cc0ae; --band-rule:#245343;
+  --gold:#f0bd5c; --amber:#f0bd5c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--band)}
+.bleed{background:var(--band);color:var(--band-ink);box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax)}
+a{color:var(--green);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.wrap{max-width:980px;margin:0 auto}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--band);box-shadow:0 0 0 100vmax var(--band);clip-path:inset(0 -100vmax);border-bottom:1px solid var(--band-rule)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px;flex-wrap:wrap}
+.mark{font-family:var(--display);font-weight:700;font-size:18px;color:var(--band-ink);text-decoration:none;letter-spacing:-.01em}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{font-family:var(--mono);font-size:13px;color:var(--band-muted);text-decoration:none;text-transform:uppercase;letter-spacing:.06em}
+nav ul a:hover{color:var(--gold)}
+
+/* hero */
+header.hero{padding-block:64px 48px}
+.now{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;color:var(--gold);
+  border:1px solid var(--gold);padding:5px 12px;border-radius:999px}
+.now::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(40px,7vw,76px);line-height:1;letter-spacing:-.03em;margin:22px 0 18px;text-wrap:balance}
+.lede{font-size:clamp(19px,2.3vw,23px);max-width:34em;margin:0;color:var(--band-ink)}
+.lede em{color:var(--gold);font-style:italic}
+.where{font-family:var(--mono);font-size:13px;color:var(--band-muted);margin-top:18px;letter-spacing:.02em}
+
+/* ledger totals */
+.totals{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--band-ink);border-bottom:3px double var(--band-ink)}
+.totals div{padding:16px 14px 14px;border-left:1px solid var(--band-rule)}
+.totals div:first-child{border-left:0;padding-left:0}
+.totals b{display:block;font-family:var(--mono);font-weight:500;font-size:30px;font-variant-numeric:tabular-nums;color:var(--gold)}
+.totals span{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--band-muted)}
+@media (max-width:640px){.totals{grid-template-columns:repeat(2,1fr)}.totals div:nth-child(3){border-left:0;padding-left:0}.totals div:nth-child(n+3){border-top:1px solid var(--band-rule)}}
+
+/* sections */
+section{padding-block:56px;border-top:1px solid var(--rule)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
+h2{font-family:var(--display);font-weight:700;color:var(--green);font-size:clamp(26px,3.6vw,34px);letter-spacing:-.02em;margin:0;text-wrap:balance}
+.acct{font-family:var(--mono);font-size:12px;color:var(--amber);font-weight:500;letter-spacing:.06em}
+h3{font-family:var(--display);font-weight:500;font-size:20px;line-height:1.3;margin:0 0 4px;letter-spacing:-.01em;text-wrap:balance}
+.org{color:var(--muted);font-size:16px;margin:0 0 10px}
+p{margin:0 0 12px}
+
+/* ledger rows */
+.row{display:grid;grid-template-columns:150px 1fr;gap:28px;padding-block:22px;border-bottom:1px solid var(--rule)}
+.row:last-child{border-bottom:0}
+.date{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:4px;font-variant-numeric:tabular-nums;border-right:1px solid var(--rule)}
+.row > div:last-child{min-width:0}
+ul.items{margin:0;padding-left:18px}
+ul.items li{margin-bottom:6px}
+ul.items li::marker{color:var(--green)}
+.fig{font-family:var(--mono);font-size:.92em;color:var(--red);font-variant-numeric:tabular-nums}
+@media (max-width:640px){.row{grid-template-columns:1fr;gap:6px}.date{border-right:0;padding-top:0}}
+
+/* about */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.about > *{min-width:0}
+.about p{max-width:36em}
+.facts{border:1px solid var(--rule);border-top:4px solid var(--gold);background:var(--sheet);padding:20px 22px;border-radius:4px;align-self:start}
+.facts dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:15px}
+.facts dt{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-top:3px}
+.facts dd{margin:0}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+
+/* research */
+.thesis{background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--green);border-radius:4px;padding:26px 28px;margin-bottom:30px}
+.tag{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:10px;display:block}
+.thesis h3{font-size:clamp(20px,2.6vw,25px);margin-bottom:12px}
+.method{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:0;list-style:none}
+.method li{font-family:var(--mono);font-size:12px;border:1px solid var(--rule);padding:3px 10px;border-radius:999px;color:var(--muted)}
+ol.refs{list-style:none;margin:0;padding:0;counter-reset:ref}
+ol.refs li{counter-increment:ref;display:grid;grid-template-columns:44px 1fr;gap:12px;padding-block:18px;border-bottom:1px solid var(--rule)}
+ol.refs li > div{min-width:0}
+ol.refs li::before{content:"[" counter(ref) "]";font-family:var(--mono);font-size:14px;color:var(--green);padding-top:2px}
+.cite{font-size:16px;color:var(--muted)}
+.cite i{color:var(--ink);font-size:18px}
+.doi{font-family:var(--mono);font-size:13px;word-break:break-all;display:inline-block;margin-top:6px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.skills > div{min-width:0}
+.skills h3{font-size:17px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{font-family:var(--mono);font-size:13px;background:var(--green-soft);color:var(--green);font-weight:500;padding:4px 10px;border-radius:3px}
+.langs{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.langs li{display:flex;justify-content:space-between;border-bottom:1px dotted var(--rule);padding-bottom:6px}
+.langs span{font-family:var(--mono);font-size:13px;color:var(--green)}
+@media (max-width:760px){.skills{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:8px}
+#contact{border-top:0}
+#contact h2{color:var(--band-ink)}
+#contact .acct{color:var(--gold)}
+#contact a:focus-visible,#contact button:focus-visible{outline-color:var(--gold)}
+.email{font-family:var(--mono);font-size:clamp(15px,2.4vw,20px);color:var(--band-ink);background:rgba(255,255,255,.06);border:1px solid var(--band-rule);padding:10px 14px;border-radius:4px;user-select:all;word-break:break-all}
+button.copy,.btn{font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;background:var(--gold);color:#13201b;border:0;padding:11px 16px;font-weight:500;border-radius:4px;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--band-ink);border:1px solid var(--band-ink)}
+footer{padding-block:28px 48px;border-top:0;font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="mark" href="#top">Tareq Hossain</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap" id="top">
+  <header class="hero bleed">
+    <span class="now">Now: MSc Management &amp; Entrepreneurship, Leuphana</span>
+    <h1>Md Tareq Hossain</h1>
+    <p class="lede">From reconciling accounts in Dhaka to researching capital markets in Lüneburg. I work where <em>finance, sustainability and evidence</em> meet.</p>
+    <p class="where">Lüneburg, Germany · English · German · Bengali</p>
+    <div class="totals" role="list">
+      <div role="listitem"><b>3</b><span>Research papers</span></div>
+      <div role="listitem"><b>4+</b><span>Years in finance</span></div>
+      <div role="listitem"><b>2</b><span>MSc programmes</span></div>
+      <div role="listitem"><b>2</b><span>Countries worked in</span></div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="sec-head"><h2>About</h2><span class="acct">01 · PROFILE</span></div>
+    <div class="about">
+      <div>
+        <p>I’m a Master’s student in Management &amp; Entrepreneurship at Leuphana University Lüneburg, after completing an MSc in Management &amp; Sustainable Accounting and Finance there.</p>
+        <p>Before moving to Germany, I spent four years in financial reporting at a textile manufacturer in Dhaka. That job taught me to check every figure, trace every discrepancy and document each step so someone else can follow it. I now bring the same habits to research: preparing data, running econometric analysis in Stata and writing up results clearly.</p>
+        <p>I’m interested in sustainability disclosure, capital markets and evidence-based entrepreneurship.</p>
+      </div>
+      <aside class="facts" aria-label="Quick facts">
+        <dl>
+          <dt>Based in</dt><dd>Lüneburg, Germany</dd>
+          <dt>Studying</dt><dd>MSc Management &amp; Entrepreneurship (since 10/2026)</dd>
+          <dt>Methods</dt><dd>Event studies, panel regression, literature reviews</dd>
+          <dt>Tools</dt><dd>Stata, Excel, Power BI, VS Code</dd>
+          <dt>Off-desk</dt><dd>Leuphana badminton champion 2023</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="sec-head"><h2>Research</h2><span class="acct">02 · PAPERS &amp; THESIS</span></div>
+    <article class="thesis">
+      <span class="tag">Master’s thesis · Leuphana · 2025</span>
+      <h3>Market Reactions to Voluntary Scope 3 Disclosure in Europe: The Moderating Role of Board-Level CSR/Sustainability Committees</h3>
+      <p>Do investors reward European companies that voluntarily report their supply-chain (Scope 3) emissions, and does a board-level sustainability committee change that reaction? I prepared and checked firm-level market and disclosure data for European listed companies, then estimated abnormal returns and panel regressions in Stata.</p>
+      <ul class="method"><li>Event study</li><li>Abnormal returns</li><li>Panel regression</li><li>Stata</li></ul>
+    </article>
+    <ol class="refs">
+      <li><div>
+        <div class="cite">Hossain, M. T. (2025). <i>Empirical Analysis: How ESG Investing Has Impacted Asset Pricing in the Equity Market.</i> SSRN working paper.</div>
+        <a class="doi" href="https://doi.org/10.2139/ssrn.5263811" target="_blank" rel="noopener">doi.org/10.2139/ssrn.5263811</a>
+      </div></li>
+      <li><div>
+        <div class="cite">Hossain, M. T. (2024). <i>Do Joint Audits Have an Impact on Audit Quality? A Comparison Between Mandatory and Voluntary Regulation.</i> SSRN working paper.</div>
+        <a class="doi" href="https://doi.org/10.2139/ssrn.4740748" target="_blank" rel="noopener">doi.org/10.2139/ssrn.4740748</a>
+      </div></li>
+      <li><div>
+        <div class="cite">Hossain, M. T. (2024). <i>A Review of Integrated Reporting and Market Reaction.</i> SSRN working paper.</div>
+        <a class="doi" href="https://doi.org/10.2139/ssrn.4783277" target="_blank" rel="noopener">doi.org/10.2139/ssrn.4783277</a>
+      </div></li>
+    </ol>
+    <p class="cite" style="margin-top:18px">Also: a course project quantifying institutional investors’ influence on workplace-safety performance in European firms.</p>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head"><h2>Experience</h2><span class="acct">03 · WORK</span></div>
+    <div class="row">
+      <div class="date">02/2024 – 01/2026</div>
+      <div>
+        <h3>Working Student, Operations</h3>
+        <p class="org">LPP Deutschland GmbH (Reserved) · Hamburg</p>
+        <ul class="items">
+          <li>Carried out daily cash closing and inventory reconciliations, tracing and documenting each discrepancy.</li>
+          <li>Maintained stock records in SAP MM with inventory accuracy above <span class="fig">98%</span>.</li>
+          <li>Trained and onboarded new team members on store procedures.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="date">02/2015 – 11/2019</div>
+      <div>
+        <h3>Accounting Associate, Financial Reporting</h3>
+        <p class="org">Noman Fashion Fabrics Ltd. · Dhaka, Bangladesh · started as Finance &amp; Accounting Trainee</p>
+        <ul class="items">
+          <li>Traced the root causes of mismatches in receivables clearing accounts, resolving about <span class="fig">$500k</span> in open balances.</li>
+          <li>Prepared monthly management reports and supporting documentation for external auditors.</li>
+          <li>Ran variance analysis on revenue and cost accounts, contributing to a <span class="fig">2%</span> cut in operating expenses (2017).</li>
+          <li>Kept records accurate under month-end and year-end deadlines in Oracle ERP.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:48px"><h2>Education</h2><span class="acct">04 · DEGREES</span></div>
+    <div class="row">
+      <div class="date">since 10/2026</div>
+      <div><h3>MSc Management &amp; Entrepreneurship</h3><p class="org">Leuphana University Lüneburg</p></div>
+    </div>
+    <div class="row">
+      <div class="date">until 01/2026</div>
+      <div><h3>MSc Management &amp; Sustainable Accounting and Finance</h3><p class="org">Leuphana University Lüneburg · incl. Sustainable Entrepreneurship Certificate (15 CP), 2023</p></div>
+    </div>
+    <div class="row">
+      <div class="date">until 08/2014</div>
+      <div><h3>BBA Finance &amp; Accounting</h3><p class="org">University of Liberal Arts Bangladesh, Dhaka · Minor in Computer Science &amp; Engineering</p></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><h2>Skills</h2><span class="acct">05 · TOOLKIT</span></div>
+    <div class="skills">
+      <div>
+        <h3>Research &amp; data</h3>
+        <ul class="chips"><li>Stata</li><li>Panel regression</li><li>Event studies</li><li>Excel</li><li>Data cleaning</li><li>Power BI</li><li>Literature reviews</li></ul>
+      </div>
+      <div>
+        <h3>Digital</h3>
+        <ul class="chips"><li>MS Office</li><li>VS Code</li><li>HTML / CSS / JavaScript</li><li>Python (basic)</li><li>C/C# (basic)</li><li>n8n</li></ul>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <ul class="langs"><li>English <span>C1</span></li><li>German <span>A2</span></li><li>Bengali <span>Native</span></li></ul>
+      </div>
+    </div>
+    <p class="cite" style="margin-top:28px">Certificates: Power BI Desktop for Business Intelligence (2024) · CSRD Fundamentals (2025) · Digital Analytics for Business, EMK Center (2019)</p>
+  </section>
+
+  <section id="contact" class="bleed">
+    <div class="sec-head"><h2>Get in touch</h2><span class="acct">06 · CONTACT</span></div>
+    <p>Open to working student roles in finance, sustainability, research and entrepreneurship.</p>
+    <div class="contact">
+      <span class="email" id="email">tareq.tenzing@gmail.com</span>
+      <button class="copy" id="copyBtn" type="button">Copy email</button>
+      <a class="btn ghost" href="https://www.linkedin.com/in/tareq-hossain" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Md Tareq Hossain · Lüneburg</span>
+    <span>Updated October 2026</span>
+  </footer>
+</main>
+
+<script>
+document.getElementById('copyBtn').addEventListener('click', function(){
+  var btn = this, text = document.getElementById('email').textContent;
+  function done(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy email'; }, 1800); }
+  function fallback(){ var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Press Ctrl+C'; }
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
+</body>
+</html>
